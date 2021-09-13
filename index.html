@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>local storage</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+
+
+
+</style>
+</head>
+<body>
+
+<form>
+    <div class="forma">
+        <label for="title">Movie:</label>
+        <input type="text" id="title" placeholder="title">
+    </div>
+    <div class="forma">
+        <label for="yr">Year:</label>
+        <input type="number" id="yr" placeholder="id">
+    </div>
+    <div class="forma">
+        <button id="btn">click to add</button>
+    </div>
+    <div id="msg">
+        <pre></pre>
+    </div>
+</form>
+
+<script src="jquery-3.6.0.min.js"></script>    
+
+
+<script>
+
+    let movies = [{
+        "title": "Rikoset",
+        "year": "2013",
+        "id": "tt0068646"
+    },
+    {
+        "title": "Blow",
+        "year": "2000",
+        "id": "tt0071562"
+    }];
+      
+/*
+    const addMovie = (ev) =>{
+        ev.preventDefault();
+        let movie = {
+            id: Date.now(),
+            title: document.getElementsByName('title').value,
+            year: document.getElementById('yr').value
+        }
+        movies.push(movie);
+        document.forms[0].reset();
+
+        console.warn("added" , {movies});
+        let pre = document.getElementById('msg');
+        pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+       
+        //localStorage.setItem('MyMovieList', JSON.stringify(movies));
+        localStorage.setItem("Filmovi", JSON.stringify(movies));
+    } 
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('btn').addEventListener('click', addMovie);
+});
+
+*/
+
+
+ localStorage.setItem("voce", "breskva");
+ var value = localStorage.filmovi;
+
+ console.log(value)
+
+ localStorage.clear();
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
